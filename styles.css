@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #191818;
+    --text-color: #e2d8d8;
+    --main-color: #0c70e9;
+    --white-color: #fdfdfd;
+    --shadow-color: rgba(0, 0, 0, .2);
+    --texte-color2: #d9c8c8;
+}
+
+body{
+    background: #0a0a0a;
+    color: var(--texte-color2);
+    behavior: "smooth"
+
+}
+
+
+html{
+    font-size: 80%;
+    overflow-x: hidden;
+    
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 7% 2rem;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+}
+
+.home .home-content {
+    max-width: 44rem;
+}
+
+.home-content h3{
+font-size: 3.2rem;
+font-weight: 600;
+line-height: .9;
+}
+
+.home-content h1{
+font-size: 5rem;
+font-weight: 700;
+margin-bottom: .3rem;
+
+}
+
+.home-content p{
+font-size: 1.6rem;
+
+
+}
+
+.home-content .social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 2.5rem 1.5rem 3rem 0;
+   transition: .5s ease;
+
+}
+
+.home-content .social-media a:hover{
+    background: var(--main-color);
+    color: var(--white-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2.8rem;
+    background: rgb(7, 191, 233);
+    border-radius: 0.6rem;
+    font-size: 1.6rem;
+    color: var(--white-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    border: 0.2rem solid transparent;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .btn::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    border-radius: 0.6rem;
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: -1;
+  }
+  
+  .btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 1rem rgba(10, 95, 232, 0.2);
+    background-color: transparent;
+  }
+  
+  .btn:hover::before {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+  
+
+.home .proffession-container{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 768px;
+    height: 768px;
+   
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.home .proffession-container .profession-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 768px;
+    height: 768px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .profession-box .profession{
+    position: absolute;
+    display: flex;
+    left: 0;
+    align-items: center;
+    flex-direction: column;
+    color: var(--main-color);
+    transform: rotate(calc(360deg / 4 * var(--i)));
+    transform-origin: 384px;
+    pad: 13px 0;
+}
+
+.home .profession-box .profession:nth-last-child(1) i{
+margin-right: 15px;
+}
+
+.home .profession-box .profession:nth-last-child(2),
+.home .profession-box .profession:nth-last-child(4) {
+    padding-bottom: 20px;
+
+}
+.home .profession i{
+    font-size: 3.8rem;
+}
+.home .profession h3{
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 600;
+    
+}
+
+
+.home .proffession-container  .overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 384px solid var(--main-color);
+    border-right: 384px solid var(--main-color);
+    border-bottom: 384px solid var(--main-color);
+    border-left: 384px solid transparent;
+
+}
+
+.home-img img{
+
+    position: absolute;
+    bottom: 0;
+    right: -30px;
+    width: 23%;
+    pointer-events: none;
+}
+
+span{
+    color: var(--main-color);
+    gap: 4rem;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-img img{
+    width: 20vw;
+}
+
+.heading{
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3 {
+    font-size: 2rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+
+
+.star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    color: rgb(226, 197, 8);
+}
+
+.Comptence {
+    padding-bottom: 4rem; 
+}
+
+
+.diplomes-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    overflow-x: auto;
+}
+
+.diplome-card {
+    position: relative;
+    background-color: var(--bg-color);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 0 0 50rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+}
+
+.diplome-card::before,
+.diplome-card::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s, transform 0.3s;
+    pointer-events: none;
+    border-radius: 8px;
+    transform: scale(0.98);
+    transform-origin: center center;
+}
+
+.diplome-card::before {
+    background-color: transparent;
+}
+
+.diplome-card::after {
+    background-color: transparent;
+}
+
+
+.diplome-card:hover::after {
+    background-color: var(--main-color);
+    transform: scale(1);
+    color: black;
+}
+
+.diplome-card-title,
+.diplome-card-description {
+    position: relative;
+    z-index: 1;
+}
+
+.diplome-card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--texte-color2);
+}
+
+.diplome-card-description {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.diplome-card-button {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.diplome-card-button:hover {
+    background-color: white;
+}
+
+.diplomes {
+    padding-bottom: 4rem;
+}
+
+.diplomes i:hover{
+    color: black;
+
+}
+
+
+.star {
+    display: inline-block;
+    margin-right: 5px;
+    color: rgb(226, 197, 8);
+   
+}
+
+
+.section-divider {
+    border: none;
+    border-top: 1px solid #056be7;
+    margin: 6rem auto;
+}
+
+.flip-card-container {
+    display: flex;
+    justify-content: space-between; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    flex-wrap: wrap; 
+    gap: .5rem;
+  }
+
+.flip-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s, box-shadow 0.3s;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    color: white;
+  }
+  
+  .flip-card-front {
+    background-color: #3f3c3c;
+  }
+  
+  .flip-card-back {
+    background-color: var(--main-color);
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .flip-card p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .experiences {
+    padding: 10px; 
+}
+
+.experience-card {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid white;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.experience-card i {
+    font-size: 24px;
+    margin-bottom: 5px; 
+}
+
+.experience-details {
+    flex: 1;
+    padding: 10px; 
+    text-align: center; 
+}
+
+.experience-title {
+    font-size: 18px;
+    margin-bottom: 5px; 
+}
+
+.experience-description {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.4; 
+}
+
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center; 
+    max-width: 1000px; 
+}
+
+.cards {
+    position: relative;
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--text-color);
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.cards:hover .image-container img {
+    transform: scale(1.1);
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: .5vw;
+}
+
+.cards:hover .text-overlay {
+    opacity: 1;
+}
+
+
+@media (max-width: 768px){
+ 
+    .home .profession-box{
+    display: none;
+}
+
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+    
+}
+
+.home-img {
+    display: none;
+}
+
+.flip-card-container {
+    display: flex;
+    justify-content: center; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    flex-wrap: wrap; 
+    gap: .5rem;
+
+}
+
+}
